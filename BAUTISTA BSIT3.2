@@ -1,0 +1,39 @@
+const NonFTs = []
+
+
+function mintNonFT (_character, _type, _haircolor, _weapon, _bling) {
+    const NonFT = {
+        "Name": _character,
+        "AnimalType": _type,
+        "Haircolor": _haircolor,
+        "Bling": _weapon,
+        "Design": _bling,
+    }
+    NonFTs.push(NonFT);
+    console.log("Minted: " + _character);
+}
+
+function listNonFTs () {
+    for (let i = 0; i < NonFTs.length; i++){
+        console.log("\nID: \t\t\t\t\t" + (i + 1));
+        console.log("\nName: \t\t\t\t" + NonFTs[i].Name);
+        console.log("Animal Type: \t\t" + NonFTs[i].AnimalType);
+        console.log("Haircolor: \t\t\t" + NonFTs[i].Haircolor);
+        
+    }
+
+}
+
+function getTotalSupply() {
+    console.log("\nTotal NFT: \t" + NonFTs.length);
+}
+
+// call your functions below this line
+mintNonFT("Blanca", "Cat", "White");
+mintNonFT("Luna", "Dog", "Gold");
+mintNonFT("Fran", "Hamster", "Gray");
+mintNonFT("Rocky", "Frog", "Green");
+mintNonFT("Penny", "Fox", "Yellow");
+mintNonFT("Lucky", "Reindeer", "Brown");
+listNonFTs();
+getTotalSupply();
